@@ -1,0 +1,11 @@
+<div *ngIf="info; else loggedOut">
+  <h5 class="text-primary">Your userName</h5>
+  <p>
+    <strong>userName:</strong> {{this.info}}.
+  </p>
+  <button class="btn btn-secondary" (click)="logout()">Logout</button>
+</div>
+
+<ng-template #loggedOut>
+<a>Welcome to Monitorhub.</a>
+</ng-template>

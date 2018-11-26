@@ -1,0 +1,23 @@
+
+li a {
+    color:white;
+    padding:10px;
+    list-style-type: none;
+    text-decoration: none;
+}
+ul {
+    list-style-type: none;
+    margin:1 px;
+    padding:15px;
+    overflow: hidden;
+    background-color:black;
+    
+}
+
+.nav-link{
+    float: right;
+   font-size: 15px;
+}
+.logo{
+    float: left;
+}

@@ -1,0 +1,49 @@
+<div style="text-align:center">
+  <h1>
+   Register
+  </h1>
+</div> 
+<div class="container">
+  <form [formGroup]="registrationform" (ngSubmit)="onSubmit()" #f="ngForm">
+    <div class="form-group">
+      <label for="name"><h4>Username</h4></label>
+      <input type="text" class="form-control" id="usernameid" required 
+      [(ngModel)]="user.userName" formControlName="usernameform">
+    </div>
+
+    <div class="form-group">
+      <label for="alterEgo"><h4>Password</h4></label>
+      <input type="text" class="form-control" id="passwordid"
+      [(ngModel)]="user.password"
+      [type]="hide ? 'password':'text'" 
+      formControlName="passwordform">
+    </div>
+
+    <div class="form-group">
+      <label for="alterEgo"><h4>Email</h4></label>
+      <input type="text" class="form-control" id="email" 
+      [(ngModel)]="user.email" formControlName="emailform">
+    </div>
+
+    <div class="form-group">
+      <label for="alterEgo"><h4>Phone-Number</h4></label>
+      <input type="text" class="form-control" id="phonenumber" 
+      [(ngModel)]="user.phonenumber" formControlName="phonenumberform">
+    </div>
+
+    <div class="form-group">
+      <label for="alterEgo"><h4>Application-Name</h4></label>
+      <input type="text" class="form-control" id="applicationname" 
+      [(ngModel)]="user.applicationname" formControlName="applicationnameform">
+    </div>
+
+    <div class="form-group">
+      <label for="alterEgo"><h4>Type of dependency eg: war,docker or jar</h4></label>
+      <input type="text" class="form-control" id="dependency" 
+      [(ngModel)]="user.dependency" formControlName="dependencyform">
+    </div>
+
+    <button type="submit" class="btn btn-success" (click)="addUsers()">Submit</button>
+
+  </form>
+</div>
